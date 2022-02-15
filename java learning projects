@@ -1,0 +1,43 @@
+ import javax.swing.*;
+import java.awt.*;
+import java.awt.*
+
+public class MainWindow{
+	JFrame frame;  //declaring frame variable
+	
+	public MainWindow() {
+
+		frame=new JFrame(); //memory allocation of frame and initializing JFrame
+		
+		frame.setVisible(true);//making our frame visible
+		frame.setSize(450,450);//setting size of our frame
+		frame.setResizable(true);// making our frame re sizable
+		frame.setTitle("hey");// putting title of our frame
+	    frame.getContentPane().setBackground(Color.yellow);//setting background color 
+	    frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("17350.jpg")));
+	    //setting icon image of our frame
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	   
+	    JButton close= new JButton("wanna close this ");
+	    close.setBounds(0,600,2000,50);
+	    close.addActionListener(e-> {frame.dispose();});
+        frame.add(close);
+        frame.setLayout(null);
+        close.setForeground(Color.BLACK);
+	    close.setBackground(Color.WHITE);
+	    
+	    JButton magic= new JButton(" click here for magic ");
+	    magic.setBounds(0,300,2000,50);
+	    magic.addActionListener(e-> {frame.getContentPane().setBackground(Color.blue);});
+        frame.add(magic);
+        magic.setForeground(Color.BLACK);
+	    magic.setBackground(Color.WHITE);
+	}
+	
+	public static void main(String[] args) {
+		
+		new MainWindow();	
+	}
+		
+}
