@@ -1,6 +1,5 @@
  import javax.swing.*;
 import java.awt.*;
-import java.awt.*
 
 public class MainWindow{
 	JFrame frame;  //declaring frame variable
